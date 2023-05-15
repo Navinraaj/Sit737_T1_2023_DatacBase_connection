@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app2
+  labels:
+    run: mypod
+spec:
+  containers:
+    - name: web1
+      image: navinraaj/sit737_2023_t1_prac5d:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8080
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
